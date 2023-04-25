@@ -62,6 +62,15 @@ public class DireccionResource {
      if(direccion.getDireccion() == null || direccion.getDireccion() == ""){
      return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
+     else if(direccion.getLatitud() == null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(direccion.getLongitud() == null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(direccion.getReferencias()== null || direccion.getReferencias()== ""){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
      direccionBean.insertar(direccion);
      return Response.created(new URI(uriInfo + "/" + direccion.getIdDireccion())).build();
     } 

@@ -62,6 +62,9 @@ public class ProductoTipoProductoResource {
      if(productoTipoProducto.getActivo()== null){
      return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
+     else if(productoTipoProducto.getFechaCreacion()== null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
      productoTipoProductoBean.insertar(productoTipoProducto);
      return Response.created(new URI(uriInfo + "/" + productoTipoProducto.getProducto())).build();
     } 

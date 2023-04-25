@@ -62,6 +62,15 @@ public class PagoResource {
      if(pago.getTipoPago() == null || pago.getTipoPago() == ""){
      return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
+     else if(pago.getMonto()== null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(pago.getReferencia()== null || pago.getReferencia()== ""){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(pago.getEstado()== null || pago.getEstado()== ""){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
      pagoBean.insertar(pago);
      return Response.created(new URI(uriInfo + "/" + pago.getIdPago())).build();
     } 

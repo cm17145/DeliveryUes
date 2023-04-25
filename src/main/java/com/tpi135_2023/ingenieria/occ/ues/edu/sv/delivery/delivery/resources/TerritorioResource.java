@@ -62,6 +62,12 @@ public class TerritorioResource {
      if(territorio.getNombre() == null || territorio.getNombre() == ""){
      return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
+     else if(territorio.getTextoVisible()== null || territorio.getTextoVisible()== ""){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(territorio.getHijosObligatorios()== null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
      territorioBean.insertar(territorio);
      return Response.created(new URI(uriInfo + "/" + territorio.getIdTerritorio())).build();
     } 

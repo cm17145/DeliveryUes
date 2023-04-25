@@ -56,15 +56,18 @@ public class TipoProductoTipoComercioResource {
         return Response.ok(tipoProductoTipoComercioEncontrado).build();
     }  
     
-     /*@POST
+     @POST
      @Consumes(MediaType.APPLICATION_JSON)
      public Response insertar(TipoProductoTipoComercio tipoProductoTipoComercio) throws URISyntaxException {
-     if(tipoProductoTipoComercio.getActivo()== null || tipoProductoTipoComercio.getActivo()== ""){
+     if(tipoProductoTipoComercio.getActivo()== null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(tipoProductoTipoComercio.getFechaCreacion()== null){
      return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
      tipoProductoTipoComercioBean.insertar(tipoProductoTipoComercio);
      return Response.created(new URI(uriInfo + "/" + tipoProductoTipoComercio.getIdTipoProductoTipoComercio())).build();
-    } */
+    } 
       
      @PUT
      @Consumes(MediaType.APPLICATION_JSON)

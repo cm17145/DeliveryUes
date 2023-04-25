@@ -62,6 +62,18 @@ public class EntregaHistorialResource {
      if(entregaHistorial.getEstadoEntrega() == null || entregaHistorial.getEstadoEntrega() == ""){
      return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
+     else if(entregaHistorial.getFechaAlcanzado()== null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(entregaHistorial.getLongitud()== null ){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(entregaHistorial.getLatitud()== null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(entregaHistorial.getObservaciones()== null || entregaHistorial.getObservaciones()== ""){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
      entregaHistorialBean.insertar(entregaHistorial);
      return Response.created(new URI(uriInfo + "/" + entregaHistorial.getIdEntregaHistorial())).build();
     } 

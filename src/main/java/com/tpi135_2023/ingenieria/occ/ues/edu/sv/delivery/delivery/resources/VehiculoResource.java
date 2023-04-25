@@ -62,6 +62,18 @@ public class VehiculoResource {
      if(vehiculo.getTipoVehiculo()== null || vehiculo.getTipoVehiculo()== ""){
      return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
+     else if(vehiculo.getPlaca()== null || vehiculo.getPlaca()== ""){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(vehiculo.getPropietario()== null || vehiculo.getPropietario()== ""){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(vehiculo.getActivo()== null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(vehiculo.getComentarios()== null || vehiculo.getComentarios()== ""){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
      vehiculoBean.insertar(vehiculo);
      return Response.created(new URI(uriInfo + "/" + vehiculo.getIdVehiculo())).build();
     } 

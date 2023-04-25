@@ -62,6 +62,12 @@ public class OrdenEstadoResource {
      if(ordenEstado.getEstado() == null || ordenEstado.getEstado() == ""){
      return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
+     else if(ordenEstado.getFechaCreacion()== null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(ordenEstado.getComentarios()== null || ordenEstado.getComentarios()== ""){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
      ordenEstadoBean.insertar(ordenEstado);
      return Response.created(new URI(uriInfo + "/" + ordenEstado.getIdOrdenEstado())).build();
     } 

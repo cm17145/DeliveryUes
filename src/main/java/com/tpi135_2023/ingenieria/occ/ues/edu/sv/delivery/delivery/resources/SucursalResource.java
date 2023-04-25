@@ -62,6 +62,12 @@ public class SucursalResource {
      if(sucursal.getNombre() == null || sucursal.getNombre() == ""){
      return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
+     else if(sucursal.getPathLogo()== null || sucursal.getPathLogo()== ""){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(sucursal.getIdDireccion()== null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
      sucursalBean.insertar(sucursal);
      return Response.created(new URI(uriInfo + "/" + sucursal.getIdSucursal())).build();
     } 

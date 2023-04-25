@@ -62,6 +62,9 @@ public class EntregaResource {
      if(entrega.getObservaciones() == null || entrega.getObservaciones() == ""){
      return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
+     else if(entrega.getFechaCreacion() == null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
      entregaBean.insertar(entrega);
      return Response.created(new URI(uriInfo + "/" + entrega.getIdEntrega())).build();
     } 

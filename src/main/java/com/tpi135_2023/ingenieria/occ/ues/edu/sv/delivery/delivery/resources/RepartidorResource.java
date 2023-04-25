@@ -62,6 +62,21 @@ public class RepartidorResource {
      if(repartidor.getNombres() == null || repartidor.getNombres() == ""){
      return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
+     else if(repartidor.getApellidos()== null || repartidor.getApellidos()== ""){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(repartidor.getTipoLicencia()== null || repartidor.getTipoLicencia() == ""){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(repartidor.getFechaNacimiento()== null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(repartidor.getActivo()== null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(repartidor.getObservaciones()== null || repartidor.getObservaciones()== ""){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
      repartidorBean.insertar(repartidor);
      return Response.created(new URI(uriInfo + "/" + repartidor.getIdRepartidor())).build();
     } 

@@ -59,7 +59,13 @@ public class FacturaResource {
      @POST
      @Consumes(MediaType.APPLICATION_JSON)
      public Response insertar(Factura factura) throws URISyntaxException {
-     if(factura.getObservaciones() == null || factura.getObservaciones() == ""){
+     if(factura.getFechaEmision()== null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(factura.getAnulada()== null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(factura.getObservaciones() == null || factura.getObservaciones() == ""){
      return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
      facturaBean.insertar(factura);

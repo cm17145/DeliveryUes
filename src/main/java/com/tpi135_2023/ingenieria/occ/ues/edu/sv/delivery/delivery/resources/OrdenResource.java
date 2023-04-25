@@ -56,15 +56,21 @@ public class OrdenResource {
         return Response.ok(ordenEncontrado).build();
     }  
     
-     /*@POST
+     @POST
      @Consumes(MediaType.APPLICATION_JSON)
      public Response insertar(Orden orden) throws URISyntaxException {
-     if(orden.getObservaciones() == null || orden.getObservaciones(() == ""){
+     if(orden.getFechaOrden()== null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(orden.getObservaciones()== null || orden.getObservaciones()== " "){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(orden.getIdDireccion()== null){
      return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
      ordenBean.insertar(orden);
      return Response.created(new URI(uriInfo + "/" + orden.getIdCliente())).build();
-    } */
+    } 
       
      @PUT
      @Consumes(MediaType.APPLICATION_JSON)

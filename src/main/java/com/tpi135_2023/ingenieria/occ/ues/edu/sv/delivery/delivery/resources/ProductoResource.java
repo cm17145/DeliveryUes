@@ -63,6 +63,12 @@ public class ProductoResource {
      if(producto.getNombre() == null || producto.getNombre() == ""){
      return Response.status(Response.Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
+     else if(producto.getActivo()== null){
+     return Response.status(Response.Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(producto.getDescripcion()== null || producto.getDescripcion()== ""){
+     return Response.status(Response.Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
      productoBean.insertar(producto);
      return Response.created(new URI(uriInfo + "/" + producto.getIdProducto())).build();
     } 

@@ -62,6 +62,12 @@ public class TipoProductoResource {
      if(tipoProducto.getNombre() == null || tipoProducto.getNombre() == ""){
      return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
+     else if(tipoProducto.getActivo()== null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(tipoProducto.getComentarios()== null || tipoProducto.getComentarios()== ""){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
      tipoProductoBean.insertar(tipoProducto);
      return Response.created(new URI(uriInfo + "/" + tipoProducto.getIdTipoProducto())).build();
     } 

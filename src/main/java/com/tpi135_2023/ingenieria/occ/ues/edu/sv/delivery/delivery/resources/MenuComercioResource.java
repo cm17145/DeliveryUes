@@ -62,6 +62,12 @@ public class MenuComercioResource {
      if(menuComercio.getNombre() == null || menuComercio.getNombre() == ""){
      return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
+     else if(menuComercio.getDescripcion()== null || menuComercio.getDescripcion()== ""){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(menuComercio.getPrecioBase()== null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
      menuComercioBean.insertar(menuComercio);
      return Response.created(new URI(uriInfo + "/" + menuComercio.getIdMenu())).build();
     } 

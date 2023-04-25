@@ -56,15 +56,18 @@ public class ProductoComercioResource {
         return Response.ok(productoComercioEncontrado).build();
     }  
     
-     /*@POST
+     @POST
      @Consumes(MediaType.APPLICATION_JSON)
      public Response insertar(ProductoComercio productoComercio) throws URISyntaxException {
-     if(productoComercio.getActivo()== null || productoComercio.getActivo() == ""){
+     if(productoComercio.getActivo()== null){
+     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(productoComercio.getFechaCreacion()== null){
      return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
      productoComercioBean.insertar(productoComercio);
      return Response.created(new URI(uriInfo + "/" + productoComercio.getIdProductoComercio())).build();
-    } */
+    } 
       
      @PUT
      @Consumes(MediaType.APPLICATION_JSON)

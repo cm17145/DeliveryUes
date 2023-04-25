@@ -61,6 +61,12 @@ public class TipoComercioResource {
      if(tipoComercio.getNombre() == null || tipoComercio.getNombre() == ""){
      return Response.status(Response.Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
+     else if(tipoComercio.getActivo()== null){
+     return Response.status(Response.Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
+     else if(tipoComercio.getComentarios()== null || tipoComercio.getComentarios()== ""){
+     return Response.status(Response.Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        }
      tipoComercioBean.insertar(tipoComercio);
      return Response.created(new URI(uriInfo + "/" + tipoComercio.getIdTipoComercio())).build();
     } 

@@ -33,65 +33,67 @@ import java.util.List;
 @Path("/comercioTipoComercio")
 @Produces(MediaType.APPLICATION_JSON)
 public class ComercioTipoComercioResource {
-    
-    @Inject 
+
+    @Inject
     private ComercioTipoComercioBean comercioTipoComercioBean;
-    
+
     @Context
     private UriInfo uriInfo;
-    
+
     @GET
-    public Response listarComerciosTipoComercio(){
-    List<ComercioTipoComercio> listaComerciosTipoComercio = comercioTipoComercioBean.listar();
-    return Response.ok(listaComerciosTipoComercio).build();
+    public Response listarComerciosTipoComercio() {
+        List<ComercioTipoComercio> listaComerciosTipoComercio = comercioTipoComercioBean.listar();
+        return Response.ok(listaComerciosTipoComercio).build();
     }
-    
+
     @GET
     @Path("/{id}")
-    public Response obtenerPorId(@PathParam("id") Long id){
+    public Response obtenerPorId(@PathParam("id") Long id) {
         ComercioTipoComercio comercioTipoComercioEncontrado = comercioTipoComercioBean.obtenerPorId(id).orElse(null);
-        if(comercioTipoComercioEncontrado == null) {
+        if (comercioTipoComercioEncontrado == null) {
             return Response.status(Status.NOT_FOUND).header("mensaje", "No se encontro el comercioTipoComercio con id" + id).build();
         }
         return Response.ok(comercioTipoComercioEncontrado).build();
-    }  
-    
-     /*@POST
-     @Consumes(MediaType.APPLICATION_JSON)
-     public Response insertar(ComercioTipoComercio comercioTipoComercio) throws URISyntaxException {
-     if(comercioTipoComercio.getActivo() == null || comercioTipoComercio.getActivo() == ""){
-     return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+    }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response insertar(ComercioTipoComercio comercioTipoComercio) throws URISyntaxException {
+        if (comercioTipoComercio.getActivo() == null) {
+            return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
+        } else if (comercioTipoComercio.getFechaCreacion() == null) {
+            return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
-     comercioTipoComercioBean.insertar(comercioTipoComercio);
-     return Response.created(new URI(uriInfo + "/" + comercioTipoComercio.getTipoComercio())).build();
-    } */
-      
-     @PUT
-     @Consumes(MediaType.APPLICATION_JSON)
-     @Path("/{id}")
-     public Response actualizar(@PathParam("id") Long id, ComercioTipoComercio comercioTipoComercio){
-     ComercioTipoComercio comercioTipoComercioEncontrado = comercioTipoComercioBean.obtenerPorId(id).orElse(null);
-     if(comercioTipoComercioEncontrado == null){
-        return Response.status(Status.NOT_FOUND).header("mensaje", "No se encontro el comercioTipoComercio con id" + id).build();
-     }
-     comercioTipoComercioEncontrado.setActivo(comercioTipoComercio.getActivo());
-     comercioTipoComercioEncontrado.setFechaCreacion(comercioTipoComercio.getFechaCreacion());
-     
-     ComercioTipoComercio comercioTipoComercioActualizado = comercioTipoComercioBean.actualizar(comercioTipoComercioEncontrado);
-     
-     return Response.ok(comercioTipoComercioActualizado).build();
-     }
-     
-     @DELETE
-     @Path("/{id}")
-     public Response eliminarComercioTipoComercio(@PathParam("id") Long id){
-     ComercioTipoComercio comercioTipoComercioEncontrado = comercioTipoComercioBean.obtenerPorId(id).orElse(null);
-     if(comercioTipoComercioEncontrado == null){
-        return Response.status(Status.NOT_FOUND).header("mensaje", "No se encontro el comercioTipoComercio con id" + id).build();
-     }
-     
-     comercioTipoComercioBean.eliminar(comercioTipoComercioEncontrado);
-     return Response.ok().build();
-     }
-     
+        comercioTipoComercioBean.insertar(comercioTipoComercio);
+        return Response.created(new URI(uriInfo + "/" + comercioTipoComercio.getTipoComercio())).build();
+    }
+
+    @PUT
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Path("/{id}")
+    public Response actualizar(@PathParam("id") Long id, ComercioTipoComercio comercioTipoComercio) {
+        ComercioTipoComercio comercioTipoComercioEncontrado = comercioTipoComercioBean.obtenerPorId(id).orElse(null);
+        if (comercioTipoComercioEncontrado == null) {
+            return Response.status(Status.NOT_FOUND).header("mensaje", "No se encontro el comercioTipoComercio con id" + id).build();
+        }
+        comercioTipoComercioEncontrado.setActivo(comercioTipoComercio.getActivo());
+        comercioTipoComercioEncontrado.setFechaCreacion(comercioTipoComercio.getFechaCreacion());
+
+        ComercioTipoComercio comercioTipoComercioActualizado = comercioTipoComercioBean.actualizar(comercioTipoComercioEncontrado);
+
+        return Response.ok(comercioTipoComercioActualizado).build();
+    }
+
+    @DELETE
+    @Path("/{id}")
+    public Response eliminarComercioTipoComercio(@PathParam("id") Long id) {
+        ComercioTipoComercio comercioTipoComercioEncontrado = comercioTipoComercioBean.obtenerPorId(id).orElse(null);
+        if (comercioTipoComercioEncontrado == null) {
+            return Response.status(Status.NOT_FOUND).header("mensaje", "No se encontro el comercioTipoComercio con id" + id).build();
+        }
+
+        comercioTipoComercioBean.eliminar(comercioTipoComercioEncontrado);
+        return Response.ok().build();
+    }
+
 }
