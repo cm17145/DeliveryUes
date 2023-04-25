@@ -24,11 +24,6 @@ public class TipoProductoTipoComercio implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "id_tipo_producto_tipo_comercio")
-    private Integer idTipoProductoTipoComercio;
     @EmbeddedId
     protected TipoProductoTipoComercioPK tipoProductoTipoComercioPK;
     @Column(name = "activo")
@@ -46,18 +41,6 @@ public class TipoProductoTipoComercio implements Serializable {
     public TipoProductoTipoComercio() {
     }
     
-    public TipoProductoTipoComercio(Integer idTipoProductoTipoComercio) {
-        this.idTipoProductoTipoComercio = idTipoProductoTipoComercio;
-    }
-
-    public Integer getIdTipoProductoTipoComercio() {
-        return idTipoProductoTipoComercio;
-    }
-
-    public void setIdTipoProductoTipoComercio(Integer idTipoProductoTipoComercio) {
-        this.idTipoProductoTipoComercio = idTipoProductoTipoComercio;
-    }
-
     public TipoProductoTipoComercio(TipoProductoTipoComercioPK tipoProductoTipoComercioPK) {
         this.tipoProductoTipoComercioPK = tipoProductoTipoComercioPK;
     }

@@ -25,11 +25,6 @@ public class ProductoComercio implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "id_productoComercio")
-    private Long idProductoComercio;
     @EmbeddedId
     protected ProductoComercioPK productoComercioPK;
     @Column(name = "activo")
@@ -48,23 +43,7 @@ public class ProductoComercio implements Serializable {
 
     public ProductoComercio() {
     }
-
-    public ProductoComercio(Long idProductoComercio) {
-        this.idProductoComercio = idProductoComercio;
-    }
-
-    public Long getIdProductoComercio() {
-        return idProductoComercio;
-    }
-
-    public void setIdProductoComercio(Long idProductoComercio) {
-        this.idProductoComercio = idProductoComercio;
-    }
     
-    public ProductoComercio(ProductoComercioPK productoComercioPK) {
-        this.productoComercioPK = productoComercioPK;
-    }
-
     public ProductoComercio(int idProducto, long idComercio) {
         this.productoComercioPK = new ProductoComercioPK(idProducto, idComercio);
     }

@@ -14,7 +14,6 @@ com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/OrdenEstad
 com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/ProductoResource.class
 com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/entity/OrdenEstado.class
 com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/DireccionResource.class
-com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/ProductoTipoProductoResource.class
 com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/ApplicationConfig.class
 com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/entity/TipoProductoTipoComercio.class
 com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/entity/ComercioTipoComercio.class
@@ -55,11 +54,9 @@ com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/control/ComercioBean
 com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/ProductoComercioResource.class
 com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/entity/EntregaHistorial.class
 com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/control/MenuComercioBean.class
-com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/ComercioTipoComercioResource.class
 com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/control/FacturaBean.class
 com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/control/EntregaBean.class
 com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/boundary/RestResourcePattern.class
-com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/TipoProductoTipoComercioResource.class
 com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/entity/Orden.class
 com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/PagoResource.class
 com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/HelloRecord.class

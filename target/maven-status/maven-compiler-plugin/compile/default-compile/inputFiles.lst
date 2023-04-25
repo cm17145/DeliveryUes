@@ -20,7 +20,6 @@
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/entity/EntregaHistorial.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/control/VehiculoBean.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/entity/Producto.java
-/home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/TipoProductoTipoComercioResource.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/entity/Direccion.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/control/DireccionBean.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/entity/MenuComercio.java
@@ -48,7 +47,6 @@
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/ClienteResource.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/TerritorioResource.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/control/ComercioTipoComercioBean.java
-/home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/ComercioTipoComercioResource.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/entity/Sucursal.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/entity/Vehiculo.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/RestResource.java
@@ -70,7 +68,6 @@
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/control/ClienteBean.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/control/TerritorioBean.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/control/EntregaHistorialBean.java
-/home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/ProductoTipoProductoResource.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/control/EntregaBean.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/entity/Orden.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/entity/Factura.java

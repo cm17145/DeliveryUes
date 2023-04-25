@@ -69,7 +69,7 @@ public class OrdenDetalleResource {
      return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
      ordenDetalleBean.insertar(ordenDetalle);
-     return Response.created(new URI(uriInfo + "/" + ordenDetalle.getIdOrdenDetalle())).build();
+     return Response.created(new URI(uriInfo + "/" + ordenDetalle.getOrdenDetallePK().getIdOrden())).build();
     } 
       
      @PUT

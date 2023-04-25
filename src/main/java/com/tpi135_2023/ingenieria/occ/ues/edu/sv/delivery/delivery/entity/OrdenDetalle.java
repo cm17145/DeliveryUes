@@ -24,12 +24,7 @@ import jakarta.persistence.*;
 public class OrdenDetalle implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
-    @Column(name = "id_ordenDetalle")
-    private Long idOrdenDetalle;
+
     @EmbeddedId
     protected OrdenDetallePK ordenDetallePK;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
@@ -47,18 +42,6 @@ public class OrdenDetalle implements Serializable {
     private Orden orden;
 
     public OrdenDetalle() {
-    }
-    
-    public OrdenDetalle(Long idOrdenDetalle) {
-        this.idOrdenDetalle = idOrdenDetalle;
-    }
-
-    public Long getIdOrdenDetalle() {
-        return idOrdenDetalle;
-    }
-
-    public void setIdOrdenDetalle(Long idOrdenDetalle) {
-        this.idOrdenDetalle = idOrdenDetalle;
     }
 
     public OrdenDetalle(OrdenDetallePK ordenDetallePK) {

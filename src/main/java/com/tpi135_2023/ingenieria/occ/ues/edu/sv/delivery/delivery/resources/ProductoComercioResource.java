@@ -66,7 +66,7 @@ public class ProductoComercioResource {
      return Response.status(Status.BAD_REQUEST).header("mensaje", "El objeto enviado no es valido").build();
         }
      productoComercioBean.insertar(productoComercio);
-     return Response.created(new URI(uriInfo + "/" + productoComercio.getIdProductoComercio())).build();
+     return Response.created(new URI(uriInfo + "/" + productoComercio.getProductoComercioPK())).build();
     } 
       
      @PUT
