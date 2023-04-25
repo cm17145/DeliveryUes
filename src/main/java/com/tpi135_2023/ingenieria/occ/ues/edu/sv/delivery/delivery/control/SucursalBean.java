@@ -5,11 +5,13 @@
 package com.tpi135_2023.ingenieria.occ.ues.edu.sv.delivery.delivery.control;
 
 import com.tpi135_2023.ingenieria.occ.ues.edu.sv.delivery.delivery.entity.Sucursal;
+import jakarta.enterprise.context.RequestScoped;
 
 /**
  *
  * @author Luis
  */
+@RequestScoped
 public class SucursalBean extends AbstractDataAccess<Sucursal> {
     
     public SucursalBean() {

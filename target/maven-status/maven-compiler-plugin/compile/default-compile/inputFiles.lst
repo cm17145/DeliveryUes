@@ -4,6 +4,7 @@
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/SucursalResource.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/MenuComercioResource.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/EntregaResource.java
+/home/cornejo/Descargas/Delivery/delivery-master/src/main/java/ApplicationConfig.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/control/TipoComercioBean.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/entity/ComercioTipoComercioPK.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/control/ProductoComercioBean.java
@@ -43,7 +44,6 @@
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/ProductoResource.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/entity/ProductoComercio.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/control/TipoProductoTipoComercioBean.java
-/home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/ApplicationConfig.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/ClienteResource.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/resources/TerritorioResource.java
 /home/cornejo/Descargas/Delivery/delivery-master/src/main/java/com/tpi135_2023/ingenieria/occ/ues/edu/sv/delivery/delivery/control/ComercioTipoComercioBean.java

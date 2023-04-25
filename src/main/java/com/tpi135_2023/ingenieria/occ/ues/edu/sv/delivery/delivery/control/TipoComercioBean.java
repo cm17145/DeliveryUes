@@ -5,11 +5,13 @@
 package com.tpi135_2023.ingenieria.occ.ues.edu.sv.delivery.delivery.control;
 
 import com.tpi135_2023.ingenieria.occ.ues.edu.sv.delivery.delivery.entity.TipoComercio;
+import jakarta.enterprise.context.RequestScoped;
 
 /**
  *
  * @author nesto
  */
+@RequestScoped
 public class TipoComercioBean extends AbstractDataAccess<TipoComercio>{
     
     public TipoComercioBean() {

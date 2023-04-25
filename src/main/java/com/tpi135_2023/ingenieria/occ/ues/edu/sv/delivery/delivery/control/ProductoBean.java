@@ -5,11 +5,13 @@
 package com.tpi135_2023.ingenieria.occ.ues.edu.sv.delivery.delivery.control;
 
 import com.tpi135_2023.ingenieria.occ.ues.edu.sv.delivery.delivery.entity.Producto;
+import jakarta.enterprise.context.RequestScoped;
 
 /**
  *
  * @author nesto
  */
+@RequestScoped
 public class ProductoBean extends AbstractDataAccess<Producto> {
 
 public ProductoBean() {

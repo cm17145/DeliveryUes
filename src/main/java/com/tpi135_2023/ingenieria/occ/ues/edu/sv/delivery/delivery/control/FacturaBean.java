@@ -5,11 +5,13 @@
 package com.tpi135_2023.ingenieria.occ.ues.edu.sv.delivery.delivery.control;
 
 import com.tpi135_2023.ingenieria.occ.ues.edu.sv.delivery.delivery.entity.Factura;
+import jakarta.enterprise.context.RequestScoped;
 
 /**
  *
  * @author Luis
  */
+@RequestScoped
 public class FacturaBean extends AbstractDataAccess<Factura> {
     
     public FacturaBean() {
